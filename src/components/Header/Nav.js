@@ -1,13 +1,10 @@
 import React from "react";
+import { Stack } from "@chakra-ui/react";
 
-const navStyle = {
-  listStyleType: "none",
-  display: "flex",
-};
 function Nav() {
   return (
     <nav>
-      <ul style={navStyle}>
+      <Stack direction={["column", "row"]} listStyleType="none" padding="40px">
         <li>
           <a href="#">Home</a>
         </li>
@@ -26,7 +23,7 @@ function Nav() {
         <li>
           <a href="#">Login</a>
         </li>
-      </ul>
+      </Stack>
     </nav>
   );
 }
