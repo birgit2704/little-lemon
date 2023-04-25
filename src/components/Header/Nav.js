@@ -3,7 +3,6 @@ import React from "react";
 const navStyle = {
   listStyleType: "none",
   display: "flex",
-  justifyContent: "stretch",
 };
 function Nav() {
   return (
