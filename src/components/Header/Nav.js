@@ -1,30 +1,31 @@
 import React from "react";
-import { Stack } from "@chakra-ui/react";
+import { FaBars } from "react-icons/fa";
 
 function Nav() {
   return (
-    <nav>
-      <Stack direction={["column", "row"]} listStyleType="none" padding="40px">
-        <li>
-          <a href="#">Home</a>
-        </li>
-        <li>
-          <a href="#">About</a>
-        </li>
-        <li>
-          <a href="#">Menu</a>
-        </li>
-        <li>
-          <a href="#">Reservations</a>
-        </li>
-        <li>
-          <a href="#">Order Online</a>
-        </li>
-        <li>
-          <a href="#">Login</a>
-        </li>
-      </Stack>
-    </nav>
+    <ul className="navbar">
+      <li>
+        <a href="#home">Home</a>
+      </li>
+      <li>
+        <a href="#about">About</a>
+      </li>
+      <li>
+        <a href="#menu">Menu</a>
+      </li>
+      <li>
+        <a href="#reservations">Reservations</a>
+      </li>
+      <li>
+        <a href="#">Order Online</a>
+      </li>
+      <li>
+        <a href="#">Login</a>
+      </li>
+      <li>
+        <FaBars className="hamburger" onClick={() => console.log("clicked")} />
+      </li>
+    </ul>
   );
 }
 

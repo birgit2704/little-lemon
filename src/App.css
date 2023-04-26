@@ -1,4 +1,41 @@
+/*  --- GENERAL ---- */
+
 * {
   padding: 0;
   margin: 0;
 }
+
+body {
+  padding: 20px 120px;
+}
+
+/* --- HEADER --- */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+}
+.navbar > li > a {
+  text-decoration: none;
+}
+a {
+  padding: 5px;
+}
+.hamburger {
+  display: none;
+}
+a:link {
+  color: black;
+}
+a:visited {
+  color: black;
+}
+
+/* --- HERO SECTION --- */
