@@ -3,18 +3,46 @@
 * {
   padding: 0;
   margin: 0;
+  font-family: "Karla", sans-serif;
+}
+
+:root {
+  --primary-green: #495e57;
+  --primary-yellow: #f4ce14;
+  --secondary-pink: #ee9972;
+  --secondary-skin: #fbdabb;
+  --secondary-light: #edefee;
+  --secondary-dark: #333333;
 }
 
 body {
-  padding: 20px 120px;
+  /* padding: 20px 120px; */
+  /* width: 80vw;
+  max-width: 1000px;
+  margin: 0 auto; */
+}
+
+h1 {
+  font-family: "Markazi Text", serif;
+  font-size: 54pt;
+  font-weight: normal;
+}
+h2 {
+  font-family: "Markazi Text", serif;
+  font-size: 30pt;
+  font-weight: lighter;
 }
 
 /* --- HEADER --- */
 
 header {
+  width: 80vw;
+  max-width: 1000px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 1rem 0 1.5rem 0;
 }
 
 .navbar {
@@ -27,6 +55,7 @@ header {
 }
 a {
   padding: 5px;
+  font-weight: bold;
 }
 .hamburger {
   display: none;
@@ -39,3 +68,59 @@ a:visited {
 }
 
 /* --- HERO SECTION --- */
+.hero-container {
+  background-color: var(--primary-green);
+}
+.hero-section {
+  width: 80vw;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 0;
+}
+.hero-article {
+  width: 40%;
+}
+.hero-title {
+  color: var(--primary-yellow);
+  line-height: 40px;
+}
+
+.hero-subtitle,
+.hero-description {
+  color: var(--secondary-light);
+}
+.hero-description {
+  font-family: "Karla", sans-serif;
+  font-weight: bolder;
+  font-size: 18px;
+  margin-top: 10px;
+}
+.hero-button {
+  font-family: "Karla", sans-serif;
+  font-size: 18px;
+  font-weight: bolder;
+  padding: 7px 15px;
+  border-radius: 16px;
+  margin-top: 10px;
+  background-color: var(--primary-yellow);
+  border: none;
+}
+
+.hero-button:hover {
+  background-color: var(--secondary-skin);
+}
+figure {
+  position: relative;
+}
+
+figure > img {
+  position: absolute;
+  top: 20px;
+  right: 0px;
+
+  width: 300px;
+  height: 320px;
+  border-radius: 16px;
+}

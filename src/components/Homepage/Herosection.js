@@ -1,31 +1,25 @@
 import React from "react";
-import {
-  Button,
-  Flex,
-  Heading,
-  Text,
-  VStack,
-  HStack,
-  Image,
-  Container,
-} from "@chakra-ui/react";
-import logo from "../../assets/images/logo.jpg";
+import restauranfood from "../../assets/images/restauranfood.jpg";
 
 const Herosection = () => {
   return (
-    <HStack width="100%" justifyContent="space-between">
-      <VStack width="40%" alignItems="flex-start">
-        <Heading textAlign="left">Little Lemon</Heading>
-        <p>Chicago</p>
-        <p>
-          lorem ipsum lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum
-        </p>
-        <Button>Reserve a table</Button>
-      </VStack>
-      <Container width="40%">
-        <Image src={logo} width="200px" />
-      </Container>
-    </HStack>
+    <div className="hero-container">
+      <section className="hero-section">
+        <article className="hero-article">
+          <h1 className="hero-title">Little Lemon</h1>
+          <h2 className="hero-subtitle">Chicago</h2>
+          <p className="hero-description">
+            We are a family owned Mediterranean restaurant, focused on
+            traditional recipes served with a modern twist.
+          </p>
+          <button className="hero-button">Reserve a table</button>
+        </article>
+
+        <figure>
+          <img alt="logo" className="restauranfood" src={restauranfood} />
+        </figure>
+      </section>
+    </div>
   );
 };
 
