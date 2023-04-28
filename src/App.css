@@ -130,7 +130,7 @@ figure > img {
 .specials-container {
   width: 80vw;
   max-width: 1000px;
-  margin: 120px auto;
+  margin: 120px auto 50px auto;
 }
 .specials-header {
   display: flex;
@@ -146,7 +146,7 @@ figure > img {
 .card-container {
   margin-top: 50px;
   width: 250px;
-  background-color: rgb(234, 233, 233);
+  background-color: var(--secondary-light);
   overflow: hidden;
   border-radius: 16px 16px 0 0;
   display: flex;
@@ -192,4 +192,42 @@ figure > img {
 .card-order {
   font-weight: bold;
   margin-bottom: 15px;
+}
+
+/* --- TESTIMONIALS SECTION --- */
+.testimonials-container {
+  padding: 50px 0 20px 0;
+  background-color: var(--secondary-skin);
+}
+.testimonials-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+
+.testimonial-box-container {
+  width: 80vw;
+  max-width: 1000px;
+  margin: 20px auto 50px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 40px 0;
+}
+.testimonial-box {
+  background-color: var(--secondary-light);
+  box-sizing: border-box;
+  padding: 10px;
+
+  width: 22%;
+}
+.testimonial-photo-text-container {
+  display: flex;
+}
+.testimonial-photo {
+  margin-right: 5px;
+  width: 60px;
+}
+.testimonial-rating {
+  margin-top: 10px;
 }

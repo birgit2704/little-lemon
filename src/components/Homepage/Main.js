@@ -1,13 +1,14 @@
 import React from "react";
 import Herosection from "./Herosection";
 import Specials from "./Specials";
+import Testimonials from "./Testimonials";
 
 function Main() {
   return (
     <main>
       <Herosection />
       <Specials />
-      <div>Testimonials</div>
+      <Testimonials />
       <div>About</div>
     </main>
   );
