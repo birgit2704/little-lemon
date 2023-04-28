@@ -1,16 +1,12 @@
 import React from "react";
 import Herosection from "./Herosection";
-
-const style = {
-  backgroundColor: "yellow",
-  display: "block",
-};
+import Specials from "./Specials";
 
 function Main() {
   return (
     <main>
       <Herosection />
-      <div>Specials</div>
+      <Specials />
       <div>Testimonials</div>
       <div>About</div>
     </main>

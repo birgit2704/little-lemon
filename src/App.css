@@ -32,6 +32,20 @@ h2 {
   font-size: 30pt;
   font-weight: lighter;
 }
+button {
+  font-family: "Karla", sans-serif;
+  font-size: 18px;
+  font-weight: bolder;
+  padding: 7px 15px;
+  border-radius: 16px;
+  margin-top: 10px;
+  background-color: var(--primary-yellow);
+  border: none;
+}
+
+button:hover {
+  background-color: var(--secondary-skin);
+}
 
 /* --- HEADER --- */
 
@@ -97,30 +111,64 @@ a:visited {
   font-size: 18px;
   margin-top: 10px;
 }
-.hero-button {
-  font-family: "Karla", sans-serif;
-  font-size: 18px;
-  font-weight: bolder;
-  padding: 7px 15px;
-  border-radius: 16px;
-  margin-top: 10px;
-  background-color: var(--primary-yellow);
-  border: none;
-}
 
-.hero-button:hover {
-  background-color: var(--secondary-skin);
-}
 figure {
   position: relative;
 }
 
 figure > img {
   position: absolute;
-  top: 20px;
+  top: 10px;
   right: 0px;
 
   width: 300px;
   height: 320px;
   border-radius: 16px;
+}
+
+/* --- SPECIALS SECTION --- */
+.specials-container {
+  width: 80vw;
+  max-width: 1000px;
+  margin: 120px auto;
+}
+.specials-header {
+  display: flex;
+  justify-content: space-between;
+}
+.specials-title {
+  font-size: 50px;
+}
+.card-container {
+  margin-top: 50px;
+  width: 250px;
+  background-color: rgb(234, 233, 233);
+  overflow: hidden;
+  border-radius: 16px 16px 0 0;
+  display: flex;
+  flex-direction: column;
+}
+.card-text-container {
+  padding: 20px;
+}
+.card-title {
+  font-family: "Markazi", serif;
+}
+.card-first-line {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.card-price {
+  color: var(--secondary-pink);
+  font-weight: bold;
+}
+.card-description {
+  margin-top: 30px;
+  margin-bottom: 50px;
+  color: var(--primary-green);
+}
+.card-order {
+  font-weight: bold;
+  margin-bottom: 20px;
 }
