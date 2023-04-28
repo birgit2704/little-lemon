@@ -236,7 +236,7 @@ figure > img {
 .about-container {
   width: 80vw;
   max-width: 1000px;
-  margin: 120px auto 50px auto;
+  margin: 100px auto 200px auto;
 }
 .about-section {
   display: flex;
@@ -264,4 +264,43 @@ figure > img {
 .about-image {
   width: 400px;
   object-fit: cover;
+}
+
+/* --- FOOTER --- */
+.footer {
+  padding: 10px 0 10px 0;
+  background-color: var(--primary-green);
+}
+.footer-container {
+  width: 80vw;
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+.footer-social {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  width: 33%;
+}
+.social {
+  font-size: 40px;
+  color: var(--secondary-light);
+  display: block;
+  padding: 10px;
+}
+.address {
+  color: var(--secondary-light);
+  font-size: 18px;
+  width: 33%;
+  text-align: center;
+}
+.footer-logo {
+  scale: 100%;
+  width: 33%;
+  object-fit: contain;
+  padding-left: 40px;
 }
