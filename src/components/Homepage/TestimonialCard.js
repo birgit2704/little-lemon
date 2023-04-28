@@ -13,7 +13,7 @@ const TestimonialCard = (props) => {
         />
         <p className="testimonial-text">{props.text}</p>
       </div>
-      <p className="testimonial-rating">{props.rating}</p>
+      <p className="testimonial-rating ">{props.rating}</p>
     </div>
   );
 };

@@ -2,6 +2,7 @@ import React from "react";
 import Herosection from "./Herosection";
 import Specials from "./Specials";
 import Testimonials from "./Testimonials";
+import About from "./About";
 
 function Main() {
   return (
@@ -9,7 +10,7 @@ function Main() {
       <Herosection />
       <Specials />
       <Testimonials />
-      <div>About</div>
+      <About />
     </main>
   );
 }

@@ -231,3 +231,37 @@ figure > img {
 .testimonial-rating {
   margin-top: 10px;
 }
+
+/* --- ABOUT SECTION --- */
+.about-container {
+  width: 80vw;
+  max-width: 1000px;
+  margin: 120px auto 50px auto;
+}
+.about-section {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 0;
+}
+.about-article {
+  width: 40%;
+}
+.about-title {
+  color: var(--primary-yellow);
+  line-height: 40px;
+}
+
+.about-subtitle,
+.about-description {
+  color: var(--secondary-dark);
+}
+.about-description {
+  font-family: "Karla", sans-serif;
+  font-weight: bolder;
+  font-size: 18px;
+  margin-top: 10px;
+}
+.about-image {
+  width: 400px;
+  object-fit: cover;
+}
