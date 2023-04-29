@@ -15,13 +15,6 @@
   --secondary-dark: #333333;
 }
 
-body {
-  /* padding: 20px 120px; */
-  /* width: 80vw;
-  max-width: 1000px;
-  margin: 0 auto; */
-}
-
 h1 {
   font-family: "Markazi Text", serif;
   font-size: 54pt;
@@ -81,6 +74,19 @@ a:visited {
   color: black;
 }
 
+@media only screen and (max-width: 950px) {
+  .hamburger {
+    display: block;
+  }
+  .navbar {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    display: none;
+  }
+}
+
 /* --- HERO SECTION --- */
 .hero-container {
   background-color: var(--primary-green);
@@ -125,6 +131,19 @@ figure > img {
   height: 320px;
   border-radius: 16px;
 }
+@media only screen and (max-width: 950px) {
+  .hero-article {
+    width: 45%;
+  }
+  figure > img {
+    position: relative;
+    margin-left: 20px;
+    display: flex;
+    width: 75%;
+    object-fit: cover;
+    border-radius: 16px;
+  }
+}
 
 /* --- SPECIALS SECTION --- */
 .specials-container {
@@ -166,7 +185,7 @@ figure > img {
 
 .card-text-container {
   height: 100%;
-  padding: 20px;
+  padding: 20px 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -194,6 +213,19 @@ figure > img {
   margin-bottom: 15px;
 }
 
+@media only screen and (max-width: 950px) {
+  .specials-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  .cards-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+}
+
 /* --- TESTIMONIALS SECTION --- */
 .testimonials-container {
   padding: 50px 0 20px 0;
@@ -218,7 +250,6 @@ figure > img {
   background-color: var(--secondary-light);
   box-sizing: border-box;
   padding: 10px;
-
   width: 22%;
 }
 .testimonial-photo-text-container {
@@ -230,6 +261,19 @@ figure > img {
 }
 .testimonial-rating {
   margin-top: 10px;
+}
+
+@media only screen and (max-width: 950px) {
+  .testimonial-box {
+    width: 200px;
+  }
+  .testimonial-box-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-around;
+  }
 }
 
 /* --- ABOUT SECTION --- */
@@ -261,9 +305,28 @@ figure > img {
   font-size: 18px;
   margin-top: 10px;
 }
+
 .about-image {
   width: 400px;
   object-fit: cover;
+}
+
+@media only screen and (max-width: 950px) {
+  .about-container {
+    height: 100%;
+  }
+  .about-section {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .about-article {
+    width: 100%;
+  }
+  .about-image {
+    width: 80%;
+    border-radius: 16px;
+    margin: 50px 40px 0 0;
+  }
 }
 
 /* --- FOOTER --- */
@@ -303,4 +366,24 @@ figure > img {
   width: 33%;
   object-fit: contain;
   padding-left: 40px;
+}
+
+@media only screen and (max-width: 950px) {
+  .footer-container {
+    width: 80vw;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 20px 0;
+  }
+  .footer-logo {
+    justify-content: center;
+    margin-top: 15px;
+    padding-left: 0;
+  }
+  .footer-social {
+    justify-content: center;
+  }
 }
