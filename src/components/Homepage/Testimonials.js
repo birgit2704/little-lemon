@@ -33,6 +33,7 @@ const Testimonials = () => {
       <div className="testimonial-box-container">
         {testimonials.map((testimonial) => (
           <TestimonialCard
+            key={testimonial.text}
             title={testimonial.title}
             image={testimonial.image}
             text={testimonial.text}

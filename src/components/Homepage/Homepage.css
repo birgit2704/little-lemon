@@ -13,6 +13,7 @@
   --secondary-skin: #fbdabb;
   --secondary-light: #edefee;
   --secondary-dark: #333333;
+  scroll-behavior: smooth;
 }
 
 h1 {

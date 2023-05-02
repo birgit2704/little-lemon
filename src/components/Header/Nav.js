@@ -1,12 +1,13 @@
 import React from "react";
 import { FaBars } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 function Nav() {
   return (
     <div>
       <ul className="navbar">
         <li>
-          <a href="#home">Home</a>
+          <Link to="/">Home</Link>
         </li>
         <li>
           <a href="#about">About</a>
@@ -15,7 +16,7 @@ function Nav() {
           <a href="#menu">Menu</a>
         </li>
         <li>
-          <a href="#reservations">Reservations</a>
+          <Link to="/reservations">Reservations</Link>
         </li>
         <li>
           <a href="#">Order Online</a>
