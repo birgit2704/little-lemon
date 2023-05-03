@@ -332,7 +332,7 @@ figure > img {
 
 /* --- FOOTER --- */
 .footer {
-  padding: 10px 0 10px 0;
+  padding: 0;
   background-color: var(--primary-green);
 }
 .footer-container {
@@ -342,7 +342,7 @@ figure > img {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 20px 0;
+  padding: 30px 0;
 }
 .footer-social {
   display: flex;
@@ -351,10 +351,10 @@ figure > img {
   width: 33%;
 }
 .social {
-  font-size: 40px;
+  font-size: 30px;
   color: var(--secondary-light);
   display: block;
-  padding: 10px;
+  padding: 0 10px;
 }
 .address {
   color: var(--secondary-light);
@@ -377,7 +377,7 @@ figure > img {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    padding: 20px 0;
+    padding: 10px;
   }
   .footer-logo {
     justify-content: center;

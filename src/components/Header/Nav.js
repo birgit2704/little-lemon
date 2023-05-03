@@ -13,16 +13,16 @@ function Nav() {
           <a href="#about">About</a>
         </li>
         <li>
-          <a href="#menu">Menu</a>
+          <Link to="/">Menu</Link>
         </li>
         <li>
           <Link to="/reservations">Reservations</Link>
         </li>
         <li>
-          <a href="#">Order Online</a>
+          <Link to="/">Order online</Link>
         </li>
         <li>
-          <a href="#">Login</a>
+          <Link to="/">Login</Link>
         </li>
       </ul>
       <FaBars className="hamburger" onClick={() => console.log("clicked")} />
