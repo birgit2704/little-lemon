@@ -13,9 +13,9 @@ const BookingForm = () => {
   return (
     <div className="form-container">
       <form className="booking-form">
-        <label htmlFor="name">Your name</label>
+        <label htmlFor="name">Name</label>
         <input onChange={() => setName(name)} value={name} type="text" />
-        <label htmlFor="email">Your email</label>
+        <label htmlFor="email">Email</label>
         <input onChange={() => setEmail(email)} value={email} type="email" />
         <label htmlFor="res-date">Choose date</label>
         <input
@@ -40,7 +40,7 @@ const BookingForm = () => {
           id="guests"
           onChange={() => setGuests(guests)}
         />
-        <label htmlFor="occasion">Occasion</label>
+        <label htmlFor="occasion">Special Occasion?</label>
         <select
           onChange={() => setOccasion(occasion)}
           value={occasion}
@@ -51,7 +51,7 @@ const BookingForm = () => {
           <option>Anniversary</option>
           <option>Engagement</option>
         </select>
-        <input className="button" type="submit" value="Make your reservation" />
+        <input className="button" type="submit" value="Reserve" />
       </form>
     </div>
   );
