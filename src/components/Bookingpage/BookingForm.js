@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react";
-import { UserContext } from "../Main";
+import { TimeContext } from "../Main";
 
 const BookingForm = () => {
   const [name, setName] = useState();
@@ -8,7 +8,7 @@ const BookingForm = () => {
   const [time, setTime] = useState();
   const [guests, setGuests] = useState();
   const [occasion, setOccasion] = useState();
-  const availableTimes = useContext(UserContext);
+  const availableTimes = useContext(TimeContext);
 
   return (
     <div className="form-container">

@@ -3,7 +3,7 @@ import Header from "./Header/Header";
 import { Outlet } from "react-router-dom";
 import Footer from "./Footer/Footer";
 
-export const UserContext = createContext();
+export const TimeContext = createContext();
 
 const Main = () => {
   const [availableTimes, setAvailableTimes] = useState([
@@ -16,11 +16,11 @@ const Main = () => {
   ]);
 
   return (
-    <UserContext.Provider value={availableTimes}>
+    <TimeContext.Provider value={availableTimes}>
       <Header />
       <Outlet />
       <Footer />
-    </UserContext.Provider>
+    </TimeContext.Provider>
   );
 };
 
