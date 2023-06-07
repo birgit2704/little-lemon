@@ -8,13 +8,13 @@ import {
   createRoutesFromElements,
   Route,
 } from "react-router-dom";
-import Layout from "./components/Layout";
+import Main from "./components/Main";
 import Homepage from "./components/Homepage/Homepage";
 import BookingPage from "./components/Bookingpage/BookingPage";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
-    <Route element={<Layout />}>
+    <Route element={<Main />}>
       <Route path="/" element={<Homepage />} />
       <Route path="reservations" element={<BookingPage />} />
     </Route>

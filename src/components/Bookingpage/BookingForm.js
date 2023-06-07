@@ -49,7 +49,7 @@ const BookingForm = ({ availableTimes }) => {
           <option>Anniversary</option>
           <option>Engagement</option>
         </select>
-        <input className="button" type="submit" value="Make Your reservation" />
+        <input className="button" type="submit" value="Make your reservation" />
       </form>
     </div>
   );

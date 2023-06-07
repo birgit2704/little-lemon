@@ -1,12 +1,18 @@
 import React from "react";
-import Main from "./Main";
 import "../Homepage/homepage.css";
+import Herosection from "./Herosection";
+import Specials from "./Specials";
+import Testimonials from "./Testimonials";
+import About from "./About";
 
 const Homepage = () => {
   return (
-    <>
-      <Main />
-    </>
+    <main>
+      <Herosection />
+      <Specials />
+      <Testimonials />
+      <About />
+    </main>
   );
 };
 
