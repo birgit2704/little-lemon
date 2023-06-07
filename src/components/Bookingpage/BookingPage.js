@@ -1,6 +1,4 @@
 import BookingForm from "./BookingForm";
-import Header from "../Header/Header";
-import Footer from "../Footer/Footer";
 import { useState } from "react";
 
 const BookingPage = () => {
@@ -14,9 +12,7 @@ const BookingPage = () => {
   ]);
   return (
     <div>
-      <Header />
       <BookingForm availableTimes={availableTimes} />
-      <Footer />
     </div>
   );
 };

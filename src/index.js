@@ -1,9 +1,26 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import router from "./components/routes";
 import reportWebVitals from "./reportWebVitals";
-import { RouterProvider } from "react-router";
+// import { RouterProvider } from "react-router";
+import {
+  RouterProvider,
+  createBrowserRouter,
+  createRoutesFromElements,
+  Route,
+} from "react-router-dom";
+import Layout from "./components/Layout";
+import Homepage from "./components/Homepage/Homepage";
+import BookingPage from "./components/Bookingpage/BookingPage";
+
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <Route element={<Layout />}>
+      <Route path="/" element={<Homepage />} />
+      <Route path="reservations" element={<BookingPage />} />
+    </Route>
+  )
+);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
