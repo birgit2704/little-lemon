@@ -26,8 +26,7 @@ h2 {
   font-size: 30pt;
   font-weight: lighter;
 }
-button,
-.button {
+button {
   font-family: "Karla", sans-serif;
   font-size: 18px;
   font-weight: bolder;
@@ -391,19 +390,42 @@ figure > img {
 }
 
 /* --- BOOKING PAGE --- */
+.bookingPageBody {
+  background-color: var(--primary-yellow);
+}
+
 .form-container {
-  width: 80vw;
+  display: flex;
+  justify-content: center;
   max-width: 1000px;
   margin: 0 auto;
   padding: 100px 0;
 }
 .booking-form {
-  display: grid;
-  max-width: 200px;
-  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+  gap: 10px;
 }
 input,
 label,
 select {
   font-size: larger;
+}
+
+.button {
+  font-family: "Karla", sans-serif;
+  font-size: 18px;
+  font-weight: bolder;
+  padding: 7px 25px;
+  border-radius: 16px;
+  margin-top: 10px;
+  color: var(--secondary-light);
+  background-color: var(--primary-green);
+  border: none;
+}
+
+.button:hover {
+  color: var(--secondary-dark);
+  background-color: var(--secondary-skin);
 }

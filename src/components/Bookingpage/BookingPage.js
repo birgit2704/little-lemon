@@ -1,5 +1,6 @@
 import BookingForm from "./BookingForm";
 import { useState } from "react";
+import "../Homepage/homepage.css";
 
 const BookingPage = () => {
   const [availableTimes, setAvailableTimes] = useState([
@@ -11,7 +12,7 @@ const BookingPage = () => {
     "22:00",
   ]);
   return (
-    <div>
+    <div className="bookingPageBody">
       <BookingForm availableTimes={availableTimes} />
     </div>
   );
