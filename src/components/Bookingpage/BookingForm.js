@@ -1,12 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { UserContext } from "../Main";
 
-const BookingForm = ({ availableTimes }) => {
+const BookingForm = () => {
   const [name, setName] = useState();
   const [email, setEmail] = useState();
   const [date, setDate] = useState();
   const [time, setTime] = useState();
   const [guests, setGuests] = useState();
   const [occasion, setOccasion] = useState();
+  const availableTimes = useContext(UserContext);
 
   return (
     <div className="form-container">
