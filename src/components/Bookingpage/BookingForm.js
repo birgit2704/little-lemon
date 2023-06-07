@@ -5,10 +5,10 @@ const BookingForm = () => {
   const [name, setName] = useState();
   const [email, setEmail] = useState();
   const [date, setDate] = useState();
-  const [time, setTime] = useState();
   const [guests, setGuests] = useState();
   const [occasion, setOccasion] = useState();
-  const availableTimes = useContext(TimeContext);
+
+  const { times, dispatch } = useContext(TimeContext);
 
   return (
     <div className="form-container">
@@ -25,9 +25,9 @@ const BookingForm = () => {
           id="res-date"
         />
         <label htmlFor="res-time">Choose time</label>
-        <select onChange={() => setTime(time)} value={time} id="res-time ">
-          {availableTimes.map((time) => (
-            <option key={time}>{time}</option>
+        <select onChange={() => dispatch({ type: "UpdateTimes", time: times })}>
+          {times.map((time) => (
+            <option>{time}</option>
           ))}
         </select>
         <label htmlFor="guests">Number of guests</label>
