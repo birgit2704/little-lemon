@@ -4,6 +4,7 @@ import Herosection from "./Herosection";
 import Specials from "./Specials";
 import Testimonials from "./Testimonials";
 import About from "./About";
+import ButtonBackToTop from "../ButtonBackToTop";
 
 const Homepage = () => {
   return (
@@ -12,6 +13,7 @@ const Homepage = () => {
       <Specials />
       <Testimonials />
       <About />
+      <ButtonBackToTop />
     </main>
   );
 };

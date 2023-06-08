@@ -4,7 +4,7 @@ import logo from "../../assets/images/logo.jpg";
 
 function Header() {
   return (
-    <header>
+    <header id="header">
       <img src={logo} alt="little lemon logo" width="150px"></img>
       <Nav />
     </header>
