@@ -19,15 +19,17 @@ const BookingForm = () => {
         <input onChange={() => setEmail(email)} value={email} type="email" />
         <label htmlFor="res-date">Choose date</label>
         <input
-          onChange={() => setDate(date)}
+          onChange={() => {
+            dispatch({ type: "InitializeTimes" });
+          }}
           value={date}
           type="date"
           id="res-date"
         />
         <label htmlFor="res-time">Choose time</label>
-        <select onChange={() => dispatch({ type: "UpdateTimes", time: times })}>
+        <select onChange={() => dispatch({ type: "InitializeTimes" })}>
           {times.map((time) => (
-            <option>{time}</option>
+            <option key={time}>{time}</option>
           ))}
         </select>
         <label htmlFor="guests">Number of guests</label>
