@@ -447,8 +447,12 @@ input,
 label,
 select {
   font-family: "Karla", sans-serif;
-  color: var(--secondary-light);
+
   font-size: larger;
+}
+
+label {
+  color: var(--secondary-light);
 }
 
 .button {
