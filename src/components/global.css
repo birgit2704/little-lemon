@@ -392,7 +392,7 @@ figure > img {
 
 /* --- BOOKING PAGE --- */
 .bookingPageBody {
-  background-color: var(--primary-yellow);
+  /* background-color: var(--primary-yellow); */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -404,24 +404,32 @@ figure > img {
   background-color: var(--primary-green);
   color: var(--secondary-light);
   padding: 20px 100%;
-  margin-bottom: 20px;
 }
 
 .bookingMain {
+  width: 80vw;
+  background-color: black;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  gap: 50px;
   color: var(--secondary-dark);
+}
+.bookingAside {
+  width: 60%;
+  /* background-color: aqua; */
 }
 
 .bookingPagePhoto {
-  margin: 50px 0;
-  width: 400px;
-  border-radius: 16px;
+  margin: 0;
+  width: 100%;
+}
+.bookingTextContainer {
+  padding: 20px;
+  color: var(--secondary-light);
 }
 
 .form-container {
+  /* background-color: beige; */
+  width: 40%;
   display: flex;
   justify-content: center;
   max-width: 1000px;
@@ -431,6 +439,7 @@ figure > img {
 .booking-form {
   display: flex;
   flex-direction: column;
+  padding: 0 10px;
   width: 400px;
   gap: 10px;
 }
@@ -438,6 +447,7 @@ input,
 label,
 select {
   font-family: "Karla", sans-serif;
+  color: var(--secondary-light);
   font-size: larger;
 }
 
@@ -459,11 +469,19 @@ select {
 
 @media only screen and (max-width: 950px) {
   .bookingMain {
-    display: block;
+    display: flex;
+    flex-direction: column-reverse;
+    background-image: url("../assets/images/table.jpg");
+    background-size: cover;
   }
   .bookingPagePhoto {
-    margin: 30px 0;
-    width: 400px;
+    display: none;
+    /* margin: 30px 0;
+    width: 400px; */
+  }
+  .bookingAside {
+    width: 100%;
+    text-align: center;
   }
 }
 
@@ -473,5 +491,10 @@ select {
   }
   .booking-form {
     width: 250px;
+  }
+
+  .bookingMain {
+    width: 100%;
+    background-color: aqua;
   }
 }

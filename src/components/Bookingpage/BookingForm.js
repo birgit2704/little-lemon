@@ -1,14 +1,10 @@
-import React, { useState, useContext } from "react";
-import { TimeContext } from "../Main";
-
+import React, { useState } from "react";
 const BookingForm = () => {
   const [name, setName] = useState();
   const [email, setEmail] = useState();
   const [date, setDate] = useState();
   const [guests, setGuests] = useState();
   const [occasion, setOccasion] = useState();
-
-  const { times, dispatch } = useContext(TimeContext);
 
   return (
     <div className="form-container">
@@ -20,19 +16,19 @@ const BookingForm = () => {
         <label htmlFor="res-date">Choose date</label>
         <input
           onChange={() => {
-            dispatch({ type: "InitializeTimes" });
+            console.log("hello");
           }}
           value={date}
           type="date"
           id="res-date"
         />
         <label htmlFor="res-time">Choose time</label>
-        <select onChange={() => dispatch({ type: "InitializeTimes" })}>
-          {times.map((time) => (
+        <select onChange={() => console.log("hello")}>
+          {/* {times.map((time) => (
             <option key={time}>{time}</option>
-          ))}
+          ))} */}
         </select>
-        <label htmlFor="guests">Number of guests</label>
+        <label htmlFor="guests">Guests</label>
         <input
           value={guests}
           type="number"

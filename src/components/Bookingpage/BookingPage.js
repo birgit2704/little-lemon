@@ -1,5 +1,5 @@
 import BookingForm from "./BookingForm";
-import "../Homepage/homepage.css";
+import "../../components/global.css";
 import bookingPagePhoto from "../../assets/images/table.jpg";
 
 const BookingPage = () => {
@@ -14,8 +14,17 @@ const BookingPage = () => {
             alt="wineglasses on table"
           />
 
-          <h3>Conditions</h3>
-          <p>we hold the table for 30 min</p>
+          <div className="bookingTextContainer">
+            <h3>Conditions</h3>
+            <p>we hold the table for 30 min</p>
+            <p>
+              Please note: Yout cannot edit your reservation after submission.
+            </p>
+            <p>
+              Please double-check your answer before submitting your reservation
+              request.
+            </p>
+          </div>
         </aside>
 
         <BookingForm />
