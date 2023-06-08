@@ -1,6 +1,6 @@
 const SpecialCard = (props) => {
   return (
-    <div className="card-container">
+    <div aria-label="food specials" className="card-container">
       <div className="image-container">
         <img
           className="card-image"

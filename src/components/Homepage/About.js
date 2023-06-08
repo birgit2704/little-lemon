@@ -1,7 +1,7 @@
 const About = () => {
   return (
     <div id="about" className="about-container">
-      <section className="about-section">
+      <section aria-label="about" className="about-section">
         <article className="about-article">
           <h1 className="about-title">Little Lemon</h1>
           <h2 className="about-subtitle">Chicago</h2>

@@ -6,7 +6,7 @@ function Footer() {
   return (
     <footer className="footer">
       <div className="footer-container">
-        <ul className="footer-social">
+        <ul aria-label="list of social links" className="footer-social">
           <li>
             <a href="#home">
               <FaLinkedin className="social" />

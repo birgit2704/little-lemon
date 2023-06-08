@@ -2,7 +2,7 @@ import React from "react";
 
 const TestimonialCard = (props) => {
   return (
-    <div className="testimonial-box">
+    <div aria-label="customer testimonials" className="testimonial-box">
       <h4 className="testimonial-title">{props.title}</h4>
       <div className="testimonial-photo-text-container">
         <img

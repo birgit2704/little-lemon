@@ -6,11 +6,9 @@ import { zodResolver } from "@hookform/resolvers/zod";
 const schema = z.object({
   name: z.string().min(3, { message: "Name must be at least 3 characters" }),
   email: z.string().email(),
-  date: z.coerce
-    .date()
-    .refine((data) => data > new Date(), {
-      message: "Date must be in the future",
-    }),
+  date: z.coerce.date().refine((data) => data > new Date(), {
+    message: "Date must be in the future",
+  }),
   time: z.enum(["17", "18", "19"], {
     errorMap: () => ({ message: "Please choose a time" }),
   }),
@@ -35,7 +33,11 @@ const BookingForm = () => {
 
   return (
     <div className="form-container">
-      <form className="booking-form" onSubmit={handleSubmit(onSubmit)}>
+      <form
+        aria-label="booking form"
+        className="booking-form"
+        onSubmit={handleSubmit(onSubmit)}
+      >
         <label htmlFor="name">Name</label>
         <input {...register("name")} id="name" type="text" />
         {errors.name && <p style={{ color: "red" }}>{errors.name.message}</p>}
@@ -69,7 +71,12 @@ const BookingForm = () => {
           <option>Anniversary</option>
           <option>Engagement</option>
         </select>
-        <input className="button" type="submit" value="Reserve" />
+        <input
+          aria-label="button to reserve"
+          className="button"
+          type="submit"
+          value="Reserve"
+        />
       </form>
     </div>
   );

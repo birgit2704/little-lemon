@@ -4,7 +4,7 @@ import bookingPagePhoto from "../../assets/images/table.jpg";
 
 const BookingPage = () => {
   return (
-    <div className="bookingPageBody">
+    <div aria-label="booking page" className="bookingPageBody">
       <h2 className="bookingPageHeader">Table Reservation</h2>
       <main className="bookingMain">
         <aside className="bookingAside">

@@ -6,7 +6,7 @@ const Herosection = () => {
   const navigate = useNavigate();
   return (
     <div className="hero-container">
-      <section className="hero-section">
+      <section aria-label="hero" className="hero-section">
         <article className="hero-article">
           <h1 className="hero-title">Little Lemon</h1>
           <h2 className="hero-subtitle">Chicago</h2>
