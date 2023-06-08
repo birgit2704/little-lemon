@@ -418,6 +418,7 @@ figure > img {
 .bookingPagePhoto {
   margin: 50px 0;
   width: 400px;
+  border-radius: 16px;
 }
 
 .form-container {
