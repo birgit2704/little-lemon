@@ -1,28 +1,54 @@
 import React from "react";
 import { FaBars } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+
+const selectedStyle = {
+  color: "#ee9972",
+};
 
 function Nav() {
   return (
     <div aria-label="navigation bar">
       <ul className="navbar">
         <li>
-          <Link to="/">Home</Link>
+          <NavLink
+            style={({ isActive }) => (isActive ? selectedStyle : null)}
+            to="/"
+          >
+            Home
+          </NavLink>
         </li>
         <li>
-          <a href="#about">About</a>
+          <NavLink
+            style={({ isActive }) => (isActive ? selectedStyle : null)}
+            to="/menu"
+          >
+            Menu
+          </NavLink>
         </li>
         <li>
-          <Link to="/">Menu</Link>
+          <NavLink
+            style={({ isActive }) => (isActive ? selectedStyle : null)}
+            to="/reservations"
+          >
+            Reservations
+          </NavLink>
         </li>
         <li>
-          <Link to="/reservations">Reservations</Link>
+          <NavLink
+            style={({ isActive }) => (isActive ? selectedStyle : null)}
+            to="/orderonline"
+          >
+            Order online
+          </NavLink>
         </li>
         <li>
-          <Link to="/">Order online</Link>
-        </li>
-        <li>
-          <Link to="/">Login</Link>
+          <NavLink
+            style={({ isActive }) => (isActive ? selectedStyle : null)}
+            to="/login"
+          >
+            Login
+          </NavLink>
         </li>
       </ul>
       <FaBars className="hamburger" onClick={() => console.log("clicked")} />

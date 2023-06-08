@@ -11,12 +11,18 @@ import {
 import Main from "./components/Main";
 import Homepage from "./components/Homepage/Homepage";
 import BookingPage from "./components/Bookingpage/BookingPage";
+import LoginPage from "./components/LoginPage";
+import OrderOnlinePage from "./components/OrderOnlinePage";
+import MenuPage from "./components/MenuPage";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route element={<Main />}>
       <Route path="/" element={<Homepage />} />
       <Route path="reservations" element={<BookingPage />} />
+      <Route path="login" element={<LoginPage />} />
+      <Route path="orderonline" element={<OrderOnlinePage />} />
+      <Route path="menu" element={<MenuPage />} />
     </Route>
   )
 );

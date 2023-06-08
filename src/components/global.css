@@ -61,6 +61,7 @@ header {
 .navbar > li > a {
   text-decoration: none;
 }
+
 a {
   padding: 5px;
   font-weight: bold;
