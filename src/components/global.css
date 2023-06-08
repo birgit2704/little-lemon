@@ -356,6 +356,9 @@ figure > img {
   display: block;
   padding: 0 10px;
 }
+.social:hover {
+  color: var(--secondary-skin);
+}
 .address {
   color: var(--secondary-light);
   font-size: 18px;

@@ -9,17 +9,17 @@ function Footer() {
         <ul aria-label="list of social links" className="footer-social">
           <li>
             <a href="#home">
-              <FaLinkedin className="social" />
+              <FaLinkedin aria-label="linked-in" className="social" />
             </a>
           </li>
           <li>
             <a href="#home">
-              <FaFacebook className="social" />
+              <FaFacebook aria-label="facebook" className="social" />
             </a>
           </li>
           <li>
             <a href="#home">
-              <FaTwitter className="social" />
+              <FaTwitter aria-label="twitter" className="social" />
             </a>
           </li>
         </ul>
