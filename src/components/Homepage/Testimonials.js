@@ -5,25 +5,25 @@ const Testimonials = () => {
     {
       title: "John",
       image: "guest1.jpg",
-      text: "I love the food",
+      text: "I go regulary to Little Lemon to have lunch with my friends. I simply love the food!",
       rating: "⭐⭐⭐⭐⭐",
     },
     {
       title: "Mary",
       image: "guest2.jpg",
-      text: "I love the desserts",
+      text: "The food at Little Lemon is high quality and very tasty.",
       rating: "⭐⭐⭐⭐⭐",
     },
     {
       title: "Margret",
       image: "guest3.jpg",
-      text: "I love everything",
-      rating: "⭐⭐⭐⭐⭐",
+      text: "When there's something to celebrate, like a birthday, the whole family goes to Little Lemon.",
+      rating: "⭐⭐⭐⭐",
     },
     {
       title: "Bill",
       image: "guest4.jpg",
-      text: "I love Little Lemon",
+      text: "For me, a stay at Little Lemon is like a small holiday in Italy.",
       rating: "⭐⭐⭐⭐⭐",
     },
   ];

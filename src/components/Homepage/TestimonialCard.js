@@ -9,7 +9,6 @@ const TestimonialCard = (props) => {
           className="testimonial-photo"
           src={require(`../../assets/images/${props.image}`)}
           alt="guest"
-          width="40%"
         />
         <p className="testimonial-text">{props.text}</p>
       </div>
