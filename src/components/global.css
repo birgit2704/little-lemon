@@ -76,6 +76,14 @@ a:visited {
   color: black;
 }
 
+.backToTop {
+  font-size: 15px;
+  text-decoration: none;
+  position: fixed;
+  bottom: 150px;
+  right: 0;
+}
+
 @media only screen and (max-width: 950px) {
   .hamburger {
     display: block;
@@ -474,14 +482,6 @@ label {
 .button:hover {
   color: var(--secondary-dark);
   background-color: var(--secondary-skin);
-}
-
-.backToTop {
-  font-size: 15px;
-  text-decoration: none;
-  position: fixed;
-  bottom: 150px;
-  right: 0;
 }
 
 @media only screen and (max-width: 950px) {
