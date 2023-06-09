@@ -3,7 +3,7 @@ import { FaBars } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 
 const selectedStyle = {
-  color: "#ee9972",
+  borderBottom: "solid black 2px",
 };
 
 function Nav() {
