@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useReducer, useState } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -18,14 +18,26 @@ const schema = z.object({
     .max(10, { message: "Maximum number of guests is 10" }),
 });
 
+const reducer = (availableTimes, action) => {
+  if (action.type === "updateTimes") return ["22:00", "23:00"];
+  if (action.type === "initializeTimes") return availableTimes;
+};
+
 const BookingForm = () => {
-  function updateTimes() {
-    return availableTimes;
-  }
-  function initializeTimes() {
-    return availableTimes;
-  }
-  const [availableTimes, setAvailableTimes] = useState(["", "17", "18", "19"]);
+  // function updateTimes() {
+  //   return availableTimes;
+  // }
+  // function initializeTimes() {
+  //   return availableTimes;
+  // }
+  // const [availableTimes, setAvailableTimes] = useState(["", "17", "18", "19"]);
+
+  const [availableTimes, dispatch] = useReducer(reducer, [
+    "",
+    "17",
+    "18",
+    "19",
+  ]);
 
   const {
     register,
@@ -56,7 +68,8 @@ const BookingForm = () => {
           {...register("date")}
           id="date"
           type="date"
-          onChange={() => setAvailableTimes(["22:00", "23:00"])}
+          // onChange={() => setAvailableTimes(["22:00", "23:00"])}
+          onChange={() => dispatch({ type: "updateTimes" })}
         />
         {errors.date && <p style={{ color: "red" }}>{errors.date.message}</p>}
         <label htmlFor="time">Choose time</label>
@@ -84,7 +97,6 @@ const BookingForm = () => {
           <option>Engagement</option>
         </select>
         <input
-          data-testid="reserveBtn"
           aria-label="button to reserve"
           className="button"
           type="submit"
