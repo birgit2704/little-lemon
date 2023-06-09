@@ -15,15 +15,11 @@ const BookingPage = () => {
           />
 
           <div className="bookingTextContainer">
-            <h3>Conditions</h3>
-            <p>we hold the table for 30 min</p>
-            <p>
-              Please note: Yout cannot edit your reservation after submission.
-            </p>
-            <p>
-              Please double-check your answer before submitting your reservation
-              request.
-            </p>
+            <h3>Conditions:</h3>
+            <br />
+            <p>We hold the table for 30 min</p>
+            <br />
+            <p>Cancellations: call (555)555-1234</p>
           </div>
         </aside>
 

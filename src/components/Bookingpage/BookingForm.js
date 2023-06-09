@@ -96,6 +96,8 @@ const BookingForm = () => {
           <option>Anniversary</option>
           <option>Engagement</option>
         </select>
+        <p>Please note: You cannot edit your reservation after submission.</p>
+        <p>Please double-check your inputs before submitting.</p>
         <input
           aria-label="button to reserve"
           className="button"

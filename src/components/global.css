@@ -489,7 +489,8 @@ select {
   font-size: larger;
 }
 
-label {
+label,
+p {
   color: var(--secondary-light);
 }
 
