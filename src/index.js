@@ -14,7 +14,6 @@ import BookingPage from "./components/Bookingpage/BookingPage";
 import LoginPage from "./components/LoginPage";
 import OrderOnlinePage from "./components/OrderOnlinePage";
 import MenuPage from "./components/MenuPage";
-import SubmissionMessage from "./components/Bookingpage/SubmissionMessage";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
