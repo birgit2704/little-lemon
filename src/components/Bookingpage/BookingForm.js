@@ -48,7 +48,7 @@ const BookingForm = () => {
         <input {...register("date")} id="date" type="date" />
         {errors.date && <p style={{ color: "red" }}>{errors.date.message}</p>}
         <label htmlFor="time">Choose time</label>
-        <select {...register("time")}>
+        <select id="time" {...register("time")}>
           {availableTimes.map((time) => (
             <option key={time}>{time}</option>
           ))}
@@ -72,6 +72,7 @@ const BookingForm = () => {
           <option>Engagement</option>
         </select>
         <input
+          data-testid="reserveBtn"
           aria-label="button to reserve"
           className="button"
           type="submit"

@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { fireEvent, render, screen } from "@testing-library/react";
 import BookingForm from "./BookingForm";
 
 test("check if name exists", () => {
@@ -7,63 +7,60 @@ test("check if name exists", () => {
   expect(nameElement).toBeInTheDocument();
 });
 
-test("write a test for the initializeTimes function to validate that it returns the correct expected value", () => {
-  render(<BookingForm />);
-});
+// test("write a test for the initializeTimes function to validate that it returns the correct expected value", () => {
+//   render(<BookingForm />);
+// });
 
-test("write a unit test for the updateTimes function to validate that it returns the same value that is provided in the state. This unit test is important as it will be updated later when the logic of changing the availabel times based on the selected date is implemented", () => {
-  render(<BookingForm />);
-});
+// test("write a unit test for the updateTimes function to validate that it returns the same value that is provided in the state. This unit test is important as it will be updated later when the logic of changing the availabel times based on the selected date is implemented", () => {
+//   render(<BookingForm />);
+// });
 
 // validation tests
 //it is important to add a unit test for both valid and invalid states to ensure good
 //test coverage of your code. Without this, there is a risk of a bug existing in a code
 //path that is not tested.
 
-test("name", () => {
+test("error message if name is shorter than 3 chars", async () => {
   render(<BookingForm />);
+  const name = screen.getByLabelText(/Name/i);
+  fireEvent.change(name, { target: { value: "a" } });
+  fireEvent.submit(name);
+  const error = await screen.findByText("Name must be at least 3 characters");
+  expect(error).toBeInTheDocument();
 });
 
-test("name", () => {
+test("error message if email is not of correct format", async () => {
   render(<BookingForm />);
+  const email = screen.getByLabelText(/Email/i);
+  fireEvent.change(email, { target: { value: "abcdefg.de" } });
+  fireEvent.submit(email);
+  const error = await screen.findByText(/invalid email/i);
+  expect(error).toBeInTheDocument();
 });
 
-test("email", () => {
+test("error message if no date is chosen", async () => {
   render(<BookingForm />);
+  const date = screen.getByLabelText(/Choose date/i);
+  fireEvent.change(date, { target: { value: "TT.MM.JJJJ" } });
+  fireEvent.submit(date);
+  const error = await screen.findByText(/invalid date/i);
+  expect(error).toBeInTheDocument();
 });
 
-test("email", () => {
+test("error message if no time is chosen", async () => {
   render(<BookingForm />);
+  const time = screen.getByLabelText(/Choose time/i);
+  fireEvent.change(time, { target: { value: "" } });
+  fireEvent.submit(time);
+  const error = await screen.findByText(/please choose a time/i);
+  expect(error).toBeInTheDocument();
 });
 
-test("date", () => {
+test("error message if no guest is chosen", async () => {
   render(<BookingForm />);
-});
-
-test("date", () => {
-  render(<BookingForm />);
-});
-
-test("time", () => {
-  render(<BookingForm />);
-});
-
-test("time", () => {
-  render(<BookingForm />);
-});
-
-test("guests", () => {
-  render(<BookingForm />);
-});
-
-test("guests", () => {
-  render(<BookingForm />);
-});
-
-test("occasion", () => {
-  render(<BookingForm />);
-});
-
-test("occasion", () => {
-  render(<BookingForm />);
+  const guests = screen.getByLabelText(/Guests/i);
+  fireEvent.change(guests, { target: { value: "" } });
+  fireEvent.submit(guests);
+  const error = await screen.findByText(/number of guests is required/i);
+  expect(error).toBeInTheDocument();
 });
