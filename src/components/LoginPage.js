@@ -1,12 +1,18 @@
 import React from "react";
 
 const style = {
-  textAlign: "center",
-  padding: "50px 0",
+  height: "60vh",
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
 };
 
 const LoginPage = () => {
-  return <h2 style={style}>This login page is currently under construction</h2>;
+  return (
+    <div style={style}>
+      <h2>This login page is currently under construction</h2>
+    </div>
+  );
 };
 
 export default LoginPage;

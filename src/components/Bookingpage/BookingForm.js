@@ -2,6 +2,7 @@ import React, { useReducer, useState } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
+import SubmissionMessage from "./SubmissionMessage";
 
 const schema = z.object({
   name: z.string().min(3, { message: "Name must be at least 3 characters" }),
@@ -9,7 +10,7 @@ const schema = z.object({
   date: z.coerce.date().refine((data) => data > new Date(), {
     message: "Date must be in the future",
   }),
-  time: z.enum(["17", "18", "19"], {
+  time: z.enum(["17", "18", "19", "22:00", "23:00"], {
     errorMap: () => ({ message: "Please choose a time" }),
   }),
   guests: z
@@ -23,7 +24,7 @@ const reducer = (availableTimes, action) => {
   if (action.type === "initializeTimes") return availableTimes;
 };
 
-const BookingForm = () => {
+const BookingForm = ({ setSubmissionSuccess }) => {
   // function updateTimes() {
   //   return availableTimes;
   // }
@@ -48,6 +49,7 @@ const BookingForm = () => {
   const onSubmit = (data) => {
     console.log(data);
     reset();
+    setTimeout(() => setSubmissionSuccess(true), 2000);
   };
 
   return (

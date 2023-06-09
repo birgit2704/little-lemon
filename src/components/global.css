@@ -39,6 +39,7 @@ button {
 
 button:hover {
   background-color: var(--secondary-skin);
+  cursor: pointer;
 }
 
 /* --- HEADER --- */
@@ -539,5 +540,26 @@ label {
   .bookingMain {
     width: 100%;
     background-color: aqua;
+  }
+}
+
+/* --- SUBMISSION MESSAGE --- */
+.submissionMessage {
+  background-color: var(--secondary-skin);
+  width: 600px;
+  margin: 50px auto;
+  padding: 30px;
+  text-align: center;
+}
+
+@media only screen and (max-width: 950px) {
+  .submissionMessage {
+    width: 400px;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .submissionMessage {
+    width: 200px;
   }
 }

@@ -1,8 +1,12 @@
+import { useState } from "react";
 import BookingForm from "./BookingForm";
 import "../../components/global.css";
 import bookingPagePhoto from "../../assets/images/table.jpg";
+import SubmissionMessage from "./SubmissionMessage";
 
 const BookingPage = () => {
+  const [submissionSuccess, setSubmissionSuccess] = useState(false);
+  const showForm = !submissionSuccess;
   return (
     <div aria-label="booking page" className="bookingPageBody">
       <h2 className="bookingPageHeader">Table Reservation</h2>
@@ -23,7 +27,10 @@ const BookingPage = () => {
           </div>
         </aside>
 
-        <BookingForm />
+        {showForm && (
+          <BookingForm setSubmissionSuccess={setSubmissionSuccess} />
+        )}
+        {submissionSuccess && <SubmissionMessage />}
       </main>
     </div>
   );
