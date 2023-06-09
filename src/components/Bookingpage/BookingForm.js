@@ -19,7 +19,14 @@ const schema = z.object({
 });
 
 const BookingForm = () => {
-  const availableTimes = ["", "17", "18", "19"];
+  function updateTimes() {
+    return availableTimes;
+  }
+  function initializeTimes() {
+    return availableTimes;
+  }
+  const [availableTimes, setAvailableTimes] = useState(["", "17", "18", "19"]);
+
   const {
     register,
     handleSubmit,
@@ -45,7 +52,12 @@ const BookingForm = () => {
         <input {...register("email")} id="email" type="email" />
         {errors.email && <p style={{ color: "red" }}>{errors.email.message}</p>}
         <label htmlFor="date">Choose date</label>
-        <input {...register("date")} id="date" type="date" />
+        <input
+          {...register("date")}
+          id="date"
+          type="date"
+          onChange={() => setAvailableTimes(["22:00", "23:00"])}
+        />
         {errors.date && <p style={{ color: "red" }}>{errors.date.message}</p>}
         <label htmlFor="time">Choose time</label>
         <select id="time" {...register("time")}>
