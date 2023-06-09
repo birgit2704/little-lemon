@@ -267,8 +267,12 @@ figure > img {
   display: flex;
 }
 .testimonial-photo {
-  margin-right: 5px;
-  width: 60px;
+  margin-right: 10px;
+  width: 80px;
+  height: 80px;
+}
+.testimonial-text {
+  /* float: left; */
 }
 .testimonial-rating {
   margin-top: 10px;
