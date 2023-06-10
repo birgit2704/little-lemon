@@ -515,7 +515,7 @@ label {
   .bookingMain {
     display: flex;
     flex-direction: column-reverse;
-    background-image: url("../assets/images/table.jpg");
+    background-image: url("../src/assets/images/table.jpg");
     background-size: cover;
   }
   .bookingPagePhoto {

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import BookingForm from "./BookingForm";
-import "../../components/global.css";
+// import "../../global.css";
 import bookingPagePhoto from "../../assets/images/table.jpg";
 import ConfirmedBooking from "./ConfirmedBooking";
 

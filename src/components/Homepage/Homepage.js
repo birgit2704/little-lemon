@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import "../../components/global.css";
+// import "../../global.css";
 import Herosection from "./Herosection";
 import Specials from "./Specials";
 import Testimonials from "./Testimonials";
