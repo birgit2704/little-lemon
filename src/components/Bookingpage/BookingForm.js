@@ -2,7 +2,7 @@ import React, { useReducer } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { fetchAPI } from "../../fetchData";
+import { fetchAPI, submitAPI } from "../../fetchData";
 import { initialTimes } from "./bookingTimes";
 
 const schema = z.object({
@@ -42,6 +42,7 @@ const BookingForm = ({ setSubmissionSuccess }) => {
   } = useForm({ resolver: zodResolver(schema) });
   const onSubmit = (data) => {
     console.log(data);
+    submitAPI(data);
     reset();
     setTimeout(() => setSubmissionSuccess(true), 2000);
   };
@@ -70,9 +71,11 @@ const BookingForm = ({ setSubmissionSuccess }) => {
         {errors.date && <p style={{ color: "red" }}>{errors.date.message}</p>}
         <label htmlFor="time">Choose time</label>
         <select id="time" {...register("time")}>
-          <option>...</option>
+          <option data-testId="timeoption">...</option>
           {availableTimes.map((time) => (
-            <option key={time}>{time}</option>
+            <option data-testId="timeoption" key={time}>
+              {time}
+            </option>
           ))}
         </select>
         {errors.time && <p style={{ color: "red" }}>{errors.time.message}</p>}

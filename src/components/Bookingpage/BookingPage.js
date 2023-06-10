@@ -2,7 +2,7 @@ import { useState } from "react";
 import BookingForm from "./BookingForm";
 import "../../components/global.css";
 import bookingPagePhoto from "../../assets/images/table.jpg";
-import SubmissionMessage from "./SubmissionMessage";
+import ConfirmedBooking from "./ConfirmedBooking";
 
 const BookingPage = () => {
   const [submissionSuccess, setSubmissionSuccess] = useState(false);
@@ -30,7 +30,7 @@ const BookingPage = () => {
         {showForm && (
           <BookingForm setSubmissionSuccess={setSubmissionSuccess} />
         )}
-        {submissionSuccess && <SubmissionMessage />}
+        {submissionSuccess && <ConfirmedBooking />}
       </main>
     </div>
   );

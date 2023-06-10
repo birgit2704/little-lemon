@@ -7,18 +7,19 @@ test("check if name exists", () => {
   expect(nameElement).toBeInTheDocument();
 });
 
-// test("write a test for the initializeTimes function to validate that it returns the correct expected value", () => {
-//   render(<BookingForm />);
-// });
+test("correct initialization of times", () => {
+  render(<BookingForm />);
+  const timesArray = screen.getAllByTestId("timeoption");
+  expect(timesArray.length).toBe(15);
+});
 
-// test("write a unit test for the updateTimes function to validate that it returns the same value that is provided in the state. This unit test is important as it will be updated later when the logic of changing the availabel times based on the selected date is implemented", () => {
-//   render(<BookingForm />);
-// });
-
-// validation tests
-//it is important to add a unit test for both valid and invalid states to ensure good
-//test coverage of your code. Without this, there is a risk of a bug existing in a code
-//path that is not tested.
+test("updateTimes function works correctly", () => {
+  render(<BookingForm />);
+  const date = screen.getByLabelText(/Choose date/i);
+  fireEvent.change(date, { target: { value: new Date() } });
+  const timesArray = screen.getAllByTestId("timeoption");
+  expect(timesArray.length).toBeLessThan(19);
+});
 
 test("error message if name is shorter than 3 chars", async () => {
   render(<BookingForm />);
