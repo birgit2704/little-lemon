@@ -8,17 +8,17 @@ function Footer() {
       <div className="footer-container">
         <ul aria-label="list of social links" className="footer-social">
           <li>
-            <a href="https://linkedin.com" target="_blank">
+            <a href="https://linkedin.com" target="_blank" rel="noreferrer">
               <FaLinkedin aria-label="linked-in" className="social" />
             </a>
           </li>
           <li>
-            <a href="https://facebook.com" target="_blank">
+            <a href="https://facebook.com" target="_blank" rel="noreferrer">
               <FaFacebook aria-label="facebook" className="social" />
             </a>
           </li>
           <li>
-            <a href="https://twitter.com" target="_blank">
+            <a href="https://twitter.com" target="_blank" rel="noreferrer">
               <FaTwitter aria-label="twitter" className="social" />
             </a>
           </li>
