@@ -1,8 +1,9 @@
-import React, { useReducer, useState } from "react";
+import React, { useReducer } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-import SubmissionMessage from "./SubmissionMessage";
+import { fetchAPI } from "../../fetchData";
+import { initialTimes } from "./bookingTimes";
 
 const schema = z.object({
   name: z.string().min(3, { message: "Name must be at least 3 characters" }),
@@ -10,35 +11,28 @@ const schema = z.object({
   date: z.coerce.date().refine((data) => data > new Date(), {
     message: "Date must be in the future",
   }),
-  time: z.enum(["17", "18", "19", "22:00", "23:00"], {
+  time: z.enum(initialTimes, {
     errorMap: () => ({ message: "Please choose a time" }),
   }),
   guests: z
     .number({ invalid_type_error: "Number of guests is required" })
     .min(1, { message: "Number of guests can be between 1 and 10" })
-    .max(10, { message: "Maximum number of guests is 10" }),
+    .max(12, { message: "Maximum number of guests is 12" }),
 });
 
 const reducer = (availableTimes, action) => {
-  if (action.type === "updateTimes") return ["22:00", "23:00"];
-  if (action.type === "initializeTimes") return availableTimes;
+  if (action.type === "updateTimes") {
+    availableTimes = fetchAPI(new Date());
+    return availableTimes;
+  }
+  if (action.type === "initializeTimes") {
+    availableTimes = fetchAPI(new Date());
+    return availableTimes;
+  }
 };
 
 const BookingForm = ({ setSubmissionSuccess }) => {
-  // function updateTimes() {
-  //   return availableTimes;
-  // }
-  // function initializeTimes() {
-  //   return availableTimes;
-  // }
-  // const [availableTimes, setAvailableTimes] = useState(["", "17", "18", "19"]);
-
-  const [availableTimes, dispatch] = useReducer(reducer, [
-    "",
-    "17",
-    "18",
-    "19",
-  ]);
+  const [availableTimes, dispatch] = useReducer(reducer, initialTimes);
 
   const {
     register,
@@ -70,12 +64,12 @@ const BookingForm = ({ setSubmissionSuccess }) => {
           {...register("date")}
           id="date"
           type="date"
-          // onChange={() => setAvailableTimes(["22:00", "23:00"])}
           onChange={() => dispatch({ type: "updateTimes" })}
         />
         {errors.date && <p style={{ color: "red" }}>{errors.date.message}</p>}
         <label htmlFor="time">Choose time</label>
         <select id="time" {...register("time")}>
+          <option>...</option>
           {availableTimes.map((time) => (
             <option key={time}>{time}</option>
           ))}
