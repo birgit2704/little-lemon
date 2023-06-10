@@ -51,7 +51,6 @@ const BookingForm = ({ setSubmissionSuccess }) => {
     <div className="form-container">
       <form
         aria-label="booking form"
-        s
         className="booking-form"
         onSubmit={handleSubmit(onSubmit)}
       >
@@ -71,9 +70,9 @@ const BookingForm = ({ setSubmissionSuccess }) => {
         {errors.date && <p style={{ color: "red" }}>{errors.date.message}</p>}
         <label htmlFor="time">Choose time</label>
         <select id="time" {...register("time")}>
-          <option data-testId="timeoption">...</option>
+          <option data-testid="timeoption">...</option>
           {availableTimes.map((time) => (
-            <option data-testId="timeoption" key={time}>
+            <option data-testid="timeoption" key={time}>
               {time}
             </option>
           ))}

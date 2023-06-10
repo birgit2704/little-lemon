@@ -13,11 +13,14 @@ test("correct initialization of times", () => {
   expect(timesArray.length).toBe(15);
 });
 
-test("updateTimes function works correctly", () => {
+test("updateTimes function works correctly", async () => {
   render(<BookingForm />);
   const date = screen.getByLabelText(/Choose date/i);
-  fireEvent.change(date, { target: { value: new Date() } });
-  const timesArray = screen.getAllByTestId("timeoption");
+  const today = new Date();
+  let tomorrow = new Date();
+  tomorrow.setDate(today.getDate() + 1);
+  fireEvent.change(date, { target: { value: "tomorrow" } });
+  const timesArray = await screen.findAllByTestId("timeoption");
   expect(timesArray.length).toBeLessThan(19);
 });
 
