@@ -50,6 +50,7 @@ const BookingForm = ({ setSubmissionSuccess }) => {
     <div className="form-container">
       <form
         aria-label="booking form"
+        s
         className="booking-form"
         onSubmit={handleSubmit(onSubmit)}
       >
@@ -80,7 +81,7 @@ const BookingForm = ({ setSubmissionSuccess }) => {
           {...register("guests", { valueAsNumber: true })}
           id="guests"
           type="number"
-          placeholder="1"
+          placeholder="0"
         />
         {errors.guests && (
           <p style={{ color: "red" }}>{errors.guests.message}</p>
