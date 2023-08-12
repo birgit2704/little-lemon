@@ -11,7 +11,7 @@ const Specials = () => {
         "The famous greek salad of crispy lettuce, peppers, olives and our Chicago style feta cheese, garnished with crunchy garlic and rosemary croutons.",
     },
     {
-      image: "bruchetta.svg",
+      image: "bruchetta1.jpg",
       title: "Bruchetta",
       price: "$5.99",
       description:

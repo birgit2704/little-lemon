@@ -447,6 +447,7 @@ figure > img {
 
 .bookingMain {
   width: 80vw;
+  max-width: 1000px;
   background-color: black;
   display: flex;
   flex-direction: row;
