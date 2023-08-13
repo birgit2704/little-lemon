@@ -1,7 +1,7 @@
 import React from "react";
 
 const style = {
-  height: "60vh",
+  height: "70vh",
   display: "flex",
   justifyContent: "center",
   alignItems: "center",

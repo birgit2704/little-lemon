@@ -1,10 +1,10 @@
 import React from "react";
 
 const style = {
-  height: "60vh",
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
+  height: "50vh",
+  display: "block",
+  textAlign: "center",
+  marginTop: "20vh",
 };
 
 const MenuPage = () => {
