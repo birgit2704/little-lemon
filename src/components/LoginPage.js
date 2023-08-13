@@ -5,12 +5,25 @@ const style = {
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
+  color: "black",
+};
+
+const styleInput = {
+  color: "black",
+  display: "block",
+  marginBottom: "1rem",
+  lineHeight: "1.6",
 };
 
 const LoginPage = () => {
   return (
     <div style={style}>
-      <h2>This login page is currently under construction</h2>
+      <form>
+        <input style={styleInput} type="email" placeholder="Email" />
+
+        <input style={styleInput} type="password" placeholder="Password" />
+        <button>Log in</button>
+      </form>
     </div>
   );
 };

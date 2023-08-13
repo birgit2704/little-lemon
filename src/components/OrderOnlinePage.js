@@ -1,17 +1,21 @@
 import React from "react";
+import { useNavigate } from "react-router";
 
 const style = {
-  height: "60vh",
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
+  height: "50vh",
+  display: "block",
+  textAlign: "center",
+  marginTop: "20vh",
 };
 
 const OrderOnlinePage = () => {
+  const navigate = useNavigate();
   return (
-    <h2 style={style}>
-      This order online page is currently under construction
-    </h2>
+    <div style={style}>
+      <h2>Please log in to order online</h2>
+
+      <button onClick={() => navigate("/login")}>Log in</button>
+    </div>
   );
 };
 
