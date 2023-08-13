@@ -8,7 +8,7 @@ const style = {
 };
 
 const MenuPage = () => {
-  return <h2 style={style}>This menu page is currently under construction</h2>;
+  return <h2 style={style}>Our new menu page will be online shortly</h2>;
 };
 
 export default MenuPage;
